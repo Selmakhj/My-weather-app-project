@@ -42,15 +42,17 @@ function formatData(date) {
   return `${Day} ${hours}:${minutes}`;
 }
 
+function searchCity(city) {
+  let apiKey = "3fat9a2f32b3000dbad3081981fb44o2";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+  https: axios.get(apiUrl).then(displayTemperature);
+}
+
 function search(event) {
   event.preventDefault();
   let searchInputElement = document.querySelector("#search-input");
-  let city = searchInputElement.value;
-
-  let apiKey = "b2a5adcct04b33178913oc335f405433";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(displayTemperature);
+  searchCity(searchInputElement.value);
 }
 
 let searchForm = document.querySelector("#search-form");
