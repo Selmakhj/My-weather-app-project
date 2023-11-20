@@ -19,7 +19,7 @@ div {
   border-radius: 10px;
   max-width: 600px;
 }
-.search-for {
+.search-form {
   margin-bottom: 20px;
 }
 .row {
@@ -60,7 +60,7 @@ h1 {
   font-size: 24px;
   font-weight: 100px;
   margin: 0;
-  line-height: 28px;
+  line-height: 18px;
 }
 ul {
   display: block;
