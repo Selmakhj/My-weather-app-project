@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -21,6 +22,7 @@
               <input
                 type="search"
                 placeholder="Locations"
+                id="search-input"
                 class="form-control shadow-sm"
               />
             </div>
@@ -29,24 +31,23 @@
             </div>
           </div>
         </form>
-        <h1>Tehran</h1>
+        <h1 id="current-city"></h1>
         <ul>
-          <li>Monday, October 16</li>
-          <li>10:00 A.M.</li>
+          <li><span id="time"></span></li>
         </ul>
         <div class="row">
           <div class="col-3">
             <div class="float-left">
-              <span class="temperature">18</span>
+              <span id="current-temperature" class="temperature">18</span>
               <span class="units">°C </span>
             </div>
           </div>
           <div class="col-5">
             <ul>
-              <li class="current">Showers</li>
+              <li id="description" class="current"></li>
               <li>Precip: 80%</li>
-              <li>Humidity: 41%</li>
-              <li>Wind: 14 km/h</li>
+              <li>Humidity: <strong id="humidity"></strong></li>
+              <li>Wind: <strong id="wind-speed"></strong></li>
             </ul>
           </div>
           <div class="col-4">
