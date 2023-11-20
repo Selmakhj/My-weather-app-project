@@ -1,7 +1,7 @@
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
-  let cityElement = document.querySelector("#current-city");
+  let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windspeedElement = document.querySelector("#wind-speed");
@@ -56,4 +56,4 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-searchCity("Tehran");
+searchCity("paris");

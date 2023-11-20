@@ -14,128 +14,148 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="weatherapp">
-        <form class="search-for">
-          <div class="row g-3 align-items-center">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Locations"
-                id="search-input"
-                class="form-control shadow-sm"
-              />
+    <main>
+      <div class="container">
+        <div class="weatherapp">
+          <form class="search-for">
+            <div class="row g-3 align-items-center">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Locations"
+                  id="search-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" value="search " class="btn btn-primary" />
+              </div>
             </div>
-            <div class="col-3">
-              <input type="submit" value="search " class="btn btn-primary" />
-            </div>
-          </div>
-        </form>
-        <h1 id="current-city"></h1>
-        <ul>
-          <li><span id="time"></span></li>
-        </ul>
-        <div class="row">
-          <div class="col-3">
-            <div class="float-left">
-              <span id="current-temperature" class="temperature">18</span>
-              <span class="units">°C </span>
-            </div>
-          </div>
-          <div class="col-5">
-            <ul>
-              <li id="description" class="current"></li>
-              <li>Precip: 80%</li>
-              <li>Humidity: <strong id="humidity"></strong></li>
-              <li>Wind: <strong id="wind-speed"></strong></li>
-            </ul>
-          </div>
-          <div class="col-4">
-            <div class="clearfix">
-              <img
-                src="images/rainy.jpeg"
-                alt="Rainy icon"
-                width="100"
-                class="weather-icon float-left"
-              />
-            </div>
-          </div>
+          </form>
+          <h1 id="city"></h1>
+          <ul>
+            <li><span id="time"></span></li>
+          </ul>
           <div class="row">
-            <div class="col-2">
-              <div class="week">
-                <ul>
-                  <li class="days">Tue</li>
-                  <li class="date">17 October</li>
-                  <li class="icon">
-                    <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
-                  </li>
-                  <br />
-                  <li class="temp">17°/8°</li>
-                </ul>
+            <div class="col-3">
+              <div class="float-left">
+                <span id="current-temperature" class="temperature"></span>
+                <span class="units">°C </span>
               </div>
             </div>
-            <div class="col-2">
-              <div class="week">
-                <ul>
-                  <li class="days">Wed</li>
-                  <li class="date">18 October</li>
-                  <li class="icon">
-                    <img
-                      src="images/suncloud.png"
-                      alt="Rainy icon"
-                      width="50"
-                    />
-                  </li>
-                  <br />
-                  <li class="temp">16°/7°</li>
-                </ul>
+            <div class="col-5">
+              <ul>
+                <li id="description" class="current"></li>
+                <li>Precip: 80%</li>
+                <li>Humidity: <strong id="humidity"></strong></li>
+                <li>Wind: <strong id="wind-speed"></strong></li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <div class="clearfix">
+                <img
+                  src="images/rainy.jpeg"
+                  alt="Rainy icon"
+                  width="100"
+                  class="weather-icon float-left"
+                />
               </div>
             </div>
-            <div class="col-2">
-              <div class="week">
-                <ul>
-                  <li class="days">Thu</li>
-                  <li class="date">19 October</li>
-                  <li class="icon">
-                    <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
-                  </li>
-                  <br />
-                  <li class="temp">17°/8°</li>
-                </ul>
+            <div class="row">
+              <div class="col-2">
+                <div class="week">
+                  <ul>
+                    <li class="days">Tue</li>
+                    <li class="date">17 October</li>
+                    <li class="icon">
+                      <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
+                    </li>
+                    <br />
+                    <li class="temp">17°/8°</li>
+                  </ul>
+                </div>
               </div>
-            </div>
+              <div class="col-2">
+                <div class="week">
+                  <ul>
+                    <li class="days">Wed</li>
+                    <li class="date">18 October</li>
+                    <li class="icon">
+                      <img
+                        src="images/suncloud.png"
+                        alt="Rainy icon"
+                        width="50"
+                      />
+                    </li>
+                    <br />
+                    <li class="temp">16°/7°</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="week">
+                  <ul>
+                    <li class="days">Thu</li>
+                    <li class="date">19 October</li>
+                    <li class="icon">
+                      <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
+                    </li>
+                    <br />
+                    <li class="temp">17°/8°</li>
+                  </ul>
+                </div>
+              </div>
 
-            <div class="col-2">
-              <div class="week">
-                <ul>
-                  <li class="days">Fri</li>
-                  <li class="date">20 October</li>
-                  <li class="icon">
-                    <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
-                  </li>
-                  <br />
-                  <li class="temp">18°/8°</li>
-                </ul>
+              <div class="col-2">
+                <div class="week">
+                  <ul>
+                    <li class="days">Fri</li>
+                    <li class="date">20 October</li>
+                    <li class="icon">
+                      <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
+                    </li>
+                    <br />
+                    <li class="temp">18°/8°</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="col-2">
-              <div class="week">
-                <ul>
-                  <li class="days">Sat</li>
-                  <li class="date">21 October</li>
-                  <li class="icon">
-                    <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
-                  </li>
-                  <br />
-                  <li class="temp">18°/9°</li>
-                </ul>
+              <div class="col-2">
+                <div class="week">
+                  <ul>
+                    <li class="days">Sat</li>
+                    <li class="date">21 October</li>
+                    <li class="icon">
+                      <img src="images/suny.jpeg" alt="Rainy icon" width="50" />
+                    </li>
+                    <br />
+                    <li class="temp">18°/9°</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </main>
+    <footer>
+      <p>
+        This project was coded by
+        <a href="https://github.com/Selmakhj" target="_blank">Selma Khajeh</a>
+        and is
+        <a
+          href="https://github.com/Selmakhj/My-weather-app-project"
+          target="_blank"
+        >
+          on GitHub</a
+        >
+        and
+        <a
+          href="https://vercel.com/selmas-projects-d703f21f/my-weather-app-project/settings/domains"
+          target="_blank"
+          >hosted on Vercel</a
+        >
+      </p>
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
