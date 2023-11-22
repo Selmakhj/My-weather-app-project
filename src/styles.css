@@ -124,7 +124,7 @@ li {
 .col-2 {
   padding-right: 0px;
   padding-left: -50px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   margin-left: 10px;
   margin-right: 5px;
 }
@@ -146,14 +146,19 @@ li {
 .days {
   font-size: 15px;
   color: #212529;
+  text-align: left;
+  margin-left: -5px;
 }
 .date {
+  text-align: left;
   font-size: 10px;
   color: #7c7c7c;
+  margin-left: -5px;
 }
 .icon {
   text-align: center;
   font-size: 5px;
+  margin-left: 3px;
 }
 
 .weather-icon {
