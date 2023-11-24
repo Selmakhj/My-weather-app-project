@@ -121,58 +121,34 @@ li {
   position: relative;
   top: -38px;
 }
-.col-2 {
-  padding-right: 0px;
-  padding-left: -50px;
-  padding-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 5px;
+.weather-forecast {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.week {
-  box-sizing: border-box;
-  border: 1px solid #7c7c7c;
-  border-radius: 5%;
-  border-color: #dadde1;
-  list-style: none;
-  padding: 5%;
-  margin: 20px auto;
-  text-align: left;
-  margin-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 15px;
-}
-.days {
-  font-size: 15px;
-  color: #212529;
-  text-align: left;
-  margin-left: -5px;
-}
-.date {
-  text-align: left;
-  font-size: 10px;
-  color: #7c7c7c;
-  margin-left: -5px;
-}
-.icon {
+.weather-forecast-date {
+  font-size: 16px;
+  color: #010101;
   text-align: center;
-  font-size: 5px;
-  margin-left: 3px;
+  opacity: 0.5;
+}
+
+.weather-forecast-icon {
+  text-align: center;
+  font-size: 10px;
 }
 
 .weather-icon {
   text-align: center;
   font-size: 60px;
   font-weight: bold;
-  padding: 0 0 10px 0;
   line-height: 15px;
 }
-.temp {
-  font-size: 10px;
+.weather-forecast-temperature {
+  font-size: 20px;
   color: #7c7c7c;
   text-align: center;
-  padding-top: 25px;
+  opacity: 0.6;
 }
 footer {
   font-size: 15px;
