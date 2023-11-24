@@ -18,6 +18,8 @@ function displayWeather(response) {
   windspeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatData(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon float-left" />`;
+
+  getforecast(response.data.city);
 }
 //
 
@@ -51,7 +53,7 @@ function searchCity(city) {
   let apiKey = "3fat9a2f32b3000dbad3081981fb44o2";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-  https: axios.get(apiUrl).then(displayWeather);
+  axios.get(apiUrl).then(displayWeather);
 }
 
 function search(event) {
@@ -59,8 +61,14 @@ function search(event) {
   let searchInputElement = document.querySelector("#search-input");
   searchCity(searchInputElement.value);
 }
+function getforecast(city) {
+  let apikey = "3fat9a2f32b3000dbad3081981fb44o2";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apikey}&units=metric`;
+  axios.get(apiUrl).then(displayforecast);
+}
+function displayforecast(response) {
+  console.log(response.date);
 
-function displayforecast() {
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -73,7 +81,6 @@ function displayforecast() {
       <div class="weather-forecast-icon">☁️</div>
      <div class="weather-forecast-temperature">17°/8°</div>
      </div>
-     
      `;
   });
 
