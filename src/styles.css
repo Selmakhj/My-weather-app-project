@@ -67,9 +67,7 @@ form {
 .col-4 {
   text-align: center;
   padding: 0px 30px;
-  margin: -8px 0 10px 0;
-  padding-top: 30px;
-  margin-bottom: -10px;
+  margin: -20px 0 10px 0;
 }
 .col-5 {
   padding-top: 35px;
@@ -124,36 +122,42 @@ li {
 .weather-forecast {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .weather-forecast-date {
   font-size: 16px;
-  color: #010101;
+  color: #0e0d0d;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.6;
+  line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .weather-forecast-icon {
   text-align: center;
-  font-size: 10px;
-}
-
-.weather-icon {
-  text-align: center;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 15px;
+  font-size: 38px;
 }
 .weather-forecast-temperature {
   font-size: 20px;
   color: #7c7c7c;
   text-align: center;
   opacity: 0.6;
+  display: flex;
+  justify-content: center;
 }
+.weather-icon {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
 footer {
   font-size: 15px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: -15px;
   color: #7c7c7c;
 }
