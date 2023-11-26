@@ -21,7 +21,6 @@ function displayWeather(response) {
 
   getforecast(response.data.city);
 }
-//
 
 function formatData(date) {
   let minutes = date.getMinutes();
@@ -61,27 +60,39 @@ function search(event) {
   let searchInputElement = document.querySelector("#search-input");
   searchCity(searchInputElement.value);
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getforecast(city) {
   let apikey = "3fat9a2f32b3000dbad3081981fb44o2";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apikey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apikey}&units=metric`;
   axios.get(apiUrl).then(displayforecast);
 }
-function displayforecast(response) {
-  console.log(response.date);
 
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+function displayforecast(response) {
+  console.log(response.data);
+
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
       <div class="weather-forecast-day">
-      <div class="weather-forecast-date">${day}</div>
-      <div class="weather-forecast-icon">☁️</div>
-     <div class="weather-forecast-temperature">17°/8°</div>
+     <div class="weather-forecast-date">${formatDay(day.time)}</div>
+      <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
+     <div class="weather-forecast-temperature">${Math.round(
+       day.temperature.maximum
+     )}°/${Math.round(day.temperature.minimum)}°</div>
      </div>
      `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
@@ -91,5 +102,4 @@ function displayforecast(response) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-searchCity("paris");
-displayforecast();
+searchCity("Tehran");
